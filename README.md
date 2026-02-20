@@ -17,7 +17,7 @@ Stays in monorepo:
 - Package manager runtime (`services/packageManager.js`, `/api/packages/*`)
 - UI (`new_frontend/.../PackageManager.tsx`)
 - Feed registry (`.carapace-home/packages/github-feeds.json`)
-- Other integrations (`integration-media-providers`, `integration-remote-collab`)
+- Other integrations (`integration-remote-collab`)
 - Any cross-cutting backend Plex APIs in `server.js`
 
 ## Transitional install model

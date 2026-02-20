@@ -3,21 +3,24 @@
   "id": "integration-plex",
   "title": "Plex Integration",
   "description": "Starter integration package for Plex-related workspace integration assets.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "category": "integration",
   "source": {
     "kind": "github-release",
     "channel": "github",
-    "fallbackOrder": ["github-release", "local"],
+    "fallbackOrder": [
+      "github-release",
+      "local"
+    ],
     "github": {
-      "owner": "carapace-app",
+      "owner": "Ascendism",
       "repo": "carapace-integration-plex",
       "artifact": "integration-plex-${version}.zip"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/carapace-app/carapace-integration-plex.git"
+    "url": "https://github.com/Ascendism/carapace-integration-plex.git"
   },
   "compatibility": {
     "carapace": {
@@ -26,8 +29,8 @@
   },
   "dependencies": [
     {
-      "id": "integration-media-providers",
-      "version": ">=0.1.0"
+      "capability": "media.playback.runtime",
+      "preferredPackageId": "carapace-tool-media-runtime"
     }
   ],
   "conflicts": [],
@@ -36,6 +39,10 @@
       {
         "source": "files/integrations/plex/README.md",
         "target": "integrations/plex/README.md"
+      },
+      {
+        "source": "files/integrations/plex/integration.wizard.json",
+        "target": "integrations/plex/integration.wizard.json"
       }
     ],
     "patches": [],
@@ -43,5 +50,8 @@
       "recommended": true,
       "reason": "Integration registration refresh"
     }
+  },
+  "integrationWizard": {
+    "path": "files/integrations/plex/integration.wizard.json"
   }
 }

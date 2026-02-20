@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "integration-plex-wizard",
+  "title": "Plex Integration Setup",
+  "description": "Baseline setup flow for Plex integration.",
+  "steps": [
+    {
+      "id": "server-url",
+      "type": "collect-input",
+      "label": "Configure Plex server URL"
+    },
+    {
+      "id": "auth-token",
+      "type": "collect-input",
+      "label": "Enter Plex token"
+    },
+    {
+      "id": "test-connection",
+      "type": "test-connection",
+      "label": "Test Plex connection"
+    }
+  ],
+  "manifestType": "integration-wizard",
+  "sourceSchema": {
+    "id": "https://carapace.local/schemas/integration-wizard.schema.json",
+    "version": "1.0"
+  }
+}
